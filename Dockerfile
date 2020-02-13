@@ -1,8 +1,6 @@
-FROM alpine:3.9
-RUN apk upgrade \
-    --repository https://nl.alpinelinux.org/alpine/edge/main \
-    --no-cache
-RUN apk add python3=3.7.3-r0 \
+FROM alpine:3.11.3
+RUN apk upgrade --no-cache
+RUN apk add python3=3.8.1-r1 \
     --repository https://nl.alpinelinux.org/alpine/edge/main \
     --no-cache
 ENTRYPOINT ["/bin/sh"]
